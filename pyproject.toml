@@ -1,0 +1,30 @@
+[project]
+name = "blkjx"
+version = "0.1.0"
+description = "A JAX vectorized environment for blackjack"
+authors = [
+    {name = "Joseph Hartsell",email = "me@jahartsell.com"}
+]
+license = {text = "Apache-2.0"}
+license-files = ["LICENSE"]
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "jax (>=0.5.3,<0.6.0)",
+    "jaxtyping (>=0.3.1,<0.4.0)"
+]
+
+[project.urls]
+Repository = "https://github.com/jahartsell/blkjx"
+
+[tool.poetry]
+packages = [{include = "blkjx", from = "src"}]
+
+
+[tool.poetry.group.test.dependencies]
+pytest = "^8.3.5"
+beartype = "^0.20.2"
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
